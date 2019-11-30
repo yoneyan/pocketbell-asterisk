@@ -25,7 +25,6 @@ agi.verbose("Call from %s" % callerId)
 while True:
     result = dial_input()
     agi.verbose("got digit %s" % result)
-    # if len(dial) != 0:
     dial.append(result)
     agi.verbose("dial: " + ("".join(dial)))
     if result.isdigit():
@@ -56,14 +55,37 @@ while True:
                "90": "5", "9*": "", "9#": "",
                "01": "わ", "02": "を", "03": "ん", "04": "゛", "05": "゜", "06": "6", "07": "7", "08": "8", "09": "9",
                "00": "0", "0*": "", "0#": "",
-               "*1": "", "*2": "", "*3": "", "*4": "", "*5": "", "*6": "", "*7": "", "*8": "", "*9": "", "*0": "",
-               "**": "", "*#": "",
+               "*1": "test", "*2": "", "*3": "", "*4": "", "*5": "", "*6": "", "*7": "", "*8": "", "*9": "", "*0": "",
+               "**": "all_delete", "*#": "",
                "#1": "", "#2": "", "#3": "", "#4": "", "#5": "", "#6": "", "#7": "", "#8": "", "#9": "", "#0": "",
-               "#*": "", "##": ""
+               "#*": "", "##": "finish"
                }
         text = dic.get(text_first + text_second)
-        data.append(text)
-        agi.verbose("dial: " + ("".join(data)))
         if not text:
             continue
+        if text == "finish":
+            """    
+            for i in range(1, length):
+                number = dial(i - 1)
+                agi.verbose(number)
+                #agi.say_number(number)
+            """
+            break
+        elif text == "all_delete":
+            agi.verbose("all_delete")
+            dial.clear()
+            data.clear()
+            continue
+        elif text == "modify":
+            agi.say_digits(dial(0))
+            continue
+        elif text == "test":
+            continue
+        else:
+            data.append(text)
+            agi.verbose("data: " + ("".join(data)))
+
+agi.verbose("Finish")
+agi.hangup()
+sys.exit()
 
