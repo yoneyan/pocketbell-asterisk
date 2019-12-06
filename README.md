@@ -4,7 +4,7 @@ I made it like a Japanese pager.
 
 
 ## Deliverables
-*050-5373-8900*
+**050-5373-8900**
 
 ## Information
 Blog:[here](https://yoneyan.dev/tech/asterisk/like-pocketbell-for-asterisk/)  
