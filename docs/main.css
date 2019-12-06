@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@media print, (min-width: 768px) {
+	#contents {
+		display: table;
+	}
+	main,
+	side {
+		display: table-cell;
+	}
+    span.large {font-size: xx-large; }
+
+	main {
+		width: 80%;
+		padding-right: 20px;
+	}
+	side {
+		width: 20%;
+		padding-left: 20px;
+	}
+}
