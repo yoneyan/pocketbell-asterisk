@@ -6,4 +6,4 @@ This python script will become able to post to Twitter.
 
 ## Information
 Blog:[here](https://yoneyan.dev/tech/asterisk/like-pocketbell-for-asterisk/)  
-character code tables:[here](ポケベル.あちゃー.com)
+character code tables:[here](http://ポケベル.あちゃー.com)
