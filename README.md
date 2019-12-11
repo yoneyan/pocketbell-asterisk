@@ -8,4 +8,4 @@ I made it like a Japanese pager.
 
 ## Information
 Blog:[here](https://yoneyan.dev/tech/asterisk/like-pocketbell-for-asterisk/)  
-character code tables:[here](https://ポケベル.あちゃー.com)
+Tables:[here](https://ポケベル.あちゃー.com)
